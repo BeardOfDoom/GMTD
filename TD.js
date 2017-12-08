@@ -36,6 +36,7 @@ var weapons = [{
 var selectedWeapon;
 var placedWeapons = [];
 var weaponInterval;
+var waveMultiplier;
 
 $( document ).ready(function() {
     refreshLives();
@@ -384,7 +385,7 @@ function startWave() {
 	startWeaponInterval();
 	wave++;
 	refreshWave();
-	var waveMultiplier = (1 + wave / 10.0);
+	waveMultiplier = (1 + wave / 10.0);
 	var numOfTargets = Math.round(10 * waveMultiplier);
 
 	for(var i = 0; i < numOfTargets; i++) {
@@ -564,6 +565,8 @@ function removeTarget(target) {
 		if(targets.length == 0) {
 			stopWeaponInterval();
 			document.getElementById("startButton").disabled = false;
+			money += Math.round(10 * waveMultiplier);
+			refreshMoney();
 		}
 		tmp--;
 	}
