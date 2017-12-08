@@ -1,0 +1,51 @@
+.container 
+{
+	display: flex;
+	min-height: 100%;
+	width: 100%;
+	flex-direction: column;
+	margin: 0;
+	padding: 0;
+}
+
+#map 
+{
+	flex: 1;
+}
+
+html, body 
+{
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.brighten {
+    opacity: 0.3;
+}
+
+.brighten:hover {
+    opacity: 1;
+}
+
+.brighten.selected {
+	opacity: 1;
+}
+
+.tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #292b2c;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.nav-item:hover .tooltiptext {
+    visibility: visible;
+}

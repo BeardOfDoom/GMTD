@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Tower defense</title>
+		<script type="text/javascript" src="./jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="./jquery-ui-min.js"></script>
+		<script type="text/javascript" src="./TD.js"></script>
+		<link rel="stylesheet" type="text/css" href="./bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="./font-awesome.css">
+		<link rel="stylesheet" type="text/css" href="./TD.css">
+	</head>
+	<body>
+		<div class="container">
+			<nav class="navbar navbar-toggleable navbar-inverse bg-inverse">
+				<a class="navbar-brand" href="#">Tower defense</a>
+
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<button id="startButton" class="btn btn-outline-success" type="button" onclick="startWave()">Start wave</button>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link disabled" href="#">Disabled</a>
+					</li>
+					<li class="nav-item">
+						<span id="lives" class="navbar-text">Lives: x</span>
+					</li>
+					<li class="nav-item">
+						<span id="money" class="navbar-text">Money: x</span>
+					</li>
+					<li class="nav-item">
+						<span id="wave" class="navbar-text">Wave: x</span>
+					</li>
+					<li class="nav-item">
+						<span class="navbar-text">Weapons: </span>
+					</li>
+					<li class="nav-item">
+						<img id="weapon0" class="brighten" src="http://maps.google.com/mapfiles/ms/icons/blue-dot.png" onclick="weaponClicked(this)">
+						<span class="tooltiptext">
+							Price: 50
+							<br/>
+							Range: 200
+							<br/>
+							Damage: 30
+						</span>
+					</li>
+					<li class="nav-item">
+						<img id="weapon1" class="brighten" src="http://maps.google.com/mapfiles/ms/icons/yellow-dot.png" onclick="weaponClicked(this)">
+						<span class="tooltiptext">
+							Price: 120
+							<br/>
+							Range: 350
+							<br/>
+							Damage: 75
+						</span>
+					</li>
+					<li class="nav-item">
+						<img id="weapon2" class="brighten" src="http://maps.google.com/mapfiles/ms/icons/green-dot.png" onclick="weaponClicked(this)">
+						<span class="tooltiptext">
+							Price: 250
+							<br/>
+							Range: 200
+							<br/>
+							Damage: 200
+						</span>
+					</li>
+					<li class="nav-item">
+						<img id="weapon3" class="brighten" src="http://maps.google.com/mapfiles/ms/icons/orange-dot.png" onclick="weaponClicked(this)">
+						<span class="tooltiptext">
+							Price: 500
+							<br/>
+							Range: 700
+							<br/>
+							Damage: 150
+						</span>
+					</li>
+				</ul>
+			</nav>
+			<input id="pac-input" class="controls" type="text" placeholder="Search Box">
+			<div id="map"></div>
+		</div>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwo_67UGHBaVSOyfj031bqQk-kxIIC_-I&libraries=places&libraries=places&callback=initMap" async defer></script>
+	</body>
+</html>
