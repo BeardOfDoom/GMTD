@@ -49,3 +49,13 @@ html, body
 .nav-item:hover .tooltiptext {
     visibility: visible;
 }
+
+#informator {
+    display: none;
+    width: 100%;
+    height: 40%;
+    position: absolute;
+    top: 30%;
+    z-index: 9999998;
+    align-items: center;
+}

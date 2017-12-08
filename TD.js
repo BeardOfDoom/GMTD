@@ -580,7 +580,14 @@ function stopWeaponInterval() {
 	clearInterval(weaponInterval);
 }
 
-//TODO
 function gameOver() {
+	var text = "<p style=\" font-size: 72px; font-weight: bold;\">DODGE<p>";
+	$('#informator').append(text);
+	$('#informator').css("display", "block");
+	$('#informator').hide('slide',{direction:'right'},7000, emptyInformator);
+}
 
+function emptyInformator() {
+	$('#informator').empty();
+	location.reload();
 }
