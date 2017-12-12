@@ -447,9 +447,10 @@ function animateMarker(target, coords, km_h) {
 					targetIndex++;
 
 					if (targetIndex == coords.length){ 
-						Lives--;
-						refreshLives();
-						if(lives == 0) {
+						if(Lives > 0) {
+							Lives--;
+							refreshLives();
+						} else {
 							gameOver();
 						}
 						removeTarget(target);
@@ -581,7 +582,7 @@ function stopWeaponInterval() {
 }
 
 function gameOver() {
-	var text = "<p style=\" font-size: 72px; font-weight: bold;\">DODGE<p>";
+	var text = "<p style=\" font-size: 72px; font-weight: bold;\">DEFEAT<p>";
 	$('#informator').append(text);
 	$('#informator').css("display", "block");
 	$('#informator').hide('slide',{direction:'right'},7000, emptyInformator);
